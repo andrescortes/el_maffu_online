@@ -1,13 +1,13 @@
-package co.edu.utp.elmaffuonline.pago;
+package co.edu.utp.maffuonline;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PagoApplication {
+public class MaffuonlineApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PagoApplication.class, args);
+		SpringApplication.run(MaffuonlineApplication.class, args);
 	}
 
 }
