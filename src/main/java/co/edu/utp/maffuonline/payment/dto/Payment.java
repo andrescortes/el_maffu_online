@@ -1,6 +1,4 @@
-package co.edu.utp.maffuonline.dto;
-
-import java.io.Serializable;
+package co.edu.utp.maffuonline.payment.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,20 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "user")
-public class Pay implements Serializable {
+public class Payment {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 4446488657878594079L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
+
 	@Column(name = "nit")
 	private int nit;
 
@@ -34,12 +27,8 @@ public class Pay implements Serializable {
 	@Column(name = "invoicereference")
 	private int invoicereference;
 
-	public Pay(int nit, String namecompany, String typecompany, int invoicereference) {
+	public Payment() {
 
-		this.nit = nit;
-		this.namecompany = namecompany;
-		this.typecompany = typecompany;
-		this.invoicereference = invoicereference;
 	}
 
 	public int getNit() {
@@ -72,12 +61,6 @@ public class Pay implements Serializable {
 
 	public void setInvoicereference(int invoicereference) {
 		this.invoicereference = invoicereference;
-	}
-
-	@Override
-	public String toString() {
-		return "Pay [id=" + id + ", nit=" + nit + ", namecompany=" + namecompany + ", typecompany=" + typecompany
-				+ ", invoicereference=" + invoicereference + "]";
 	}
 
 }
